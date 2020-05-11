@@ -1,0 +1,55 @@
+@PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "contactsId")
+    private int mId;
+
+    @Nullable
+    @ColumnInfo(name = "CreationDate")
+    private String mCreationDate;
+
+    private String mName;
+
+    private String mLocation;
+
+    private int mRanking;
+
+    public Contatcs(@Nullable String CreationDate, String Name, String Location, int Ranking) {
+        mCreationDate = creationname;
+        mName = name;
+        mLocation = location;
+        mRanking = raking;
+    }
+
+    public int getId() {
+        return mId;
+    }
+
+    public void setId(int id) {
+        mId = id;
+    }
+
+    public String getCreationDate() {
+        return mCreationDate;
+    }
+
+    public void setCreationName(String creationName) {
+        creationDate = creationname;
+    }
+
+    public String getName() {
+        return mName;
+    }
+
+    public void setName(String name) {
+        mName = name;
+    }
+
+    public String getLocation(String location) {
+        return mLocation;
+    }
+
+    public void setScore(int ranking) {
+        mRanking = Ranking;
+    }
+
+}
