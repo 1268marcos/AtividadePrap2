@@ -1,3 +1,14 @@
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+
+@Entity(tableName = "contacts")
+
+public class Contact {
+
 @PrimaryKey(autoGenerate = true)
     @NonNull
     @ColumnInfo(name = "contactsId")
@@ -13,11 +24,11 @@
 
     private int mRanking;
 
-    public Contatcs(@Nullable String CreationDate, String Name, String Location, int Ranking) {
-        mCreationDate = creationname;
+    public Contact(@Nullable String creationDate, String name, String location, int ranking) {
+        mCreationDate = creationDate;
         mName = name;
         mLocation = location;
-        mRanking = raking;
+        mRanking = ranking;
     }
 
     public int getId() {
@@ -32,8 +43,8 @@
         return mCreationDate;
     }
 
-    public void setCreationName(String creationName) {
-        creationDate = creationname;
+    public void setCreationDate(String creationDate) {
+        mCreationDate = creationDate;
     }
 
     public String getName() {
@@ -44,12 +55,20 @@
         mName = name;
     }
 
-    public String getLocation(String location) {
+    public String getLocation() {
         return mLocation;
     }
 
-    public void setScore(int ranking) {
+    public void setRanking(int ranking) {
         mRanking = Ranking;
     }
-
+    
+ public int getRanking(){
+        return  mRanking;
+    }
+    
+     public void setLocation(String location){
+        mLocation=location;
+    }
+    
 }
